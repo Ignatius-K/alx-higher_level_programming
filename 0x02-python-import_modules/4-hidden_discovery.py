@@ -15,7 +15,7 @@ def get_defined_names(attributes):
         if attribute.startswith("__"):
             continue
         attribute_list.append(attribute)
-    return sorted(attribute_list) 
+    return sorted(attribute_list)
 
 
 if __name__ == '__main__':
@@ -23,4 +23,3 @@ if __name__ == '__main__':
     module_attributes = get_defined_names(dir(hidden_4))
     for attribute in module_attributes:
         print("{}".format(attribute))
-
