@@ -1,10 +1,5 @@
 #!/usr/bin/python3
 
-def print_char(char):
-    """print one-character string given ASCII value"""
-    print("{}".format(chr(char)), end="")
-
-
 def uppercase(str):
     """print uppercase string
 
