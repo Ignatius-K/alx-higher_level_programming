@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def uppercase(str):
-    """print uppercase string
+    """uppercase string
 
     Params:
         str(str) : string to Transform
