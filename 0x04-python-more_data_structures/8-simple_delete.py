@@ -10,5 +10,6 @@ def simple_delete(a_dictionary={}, key=""):
     Return:
         modified dict
     '''
-    a_dictionary.pop(key)
+    if key in a_dictionary.keys():
+        a_dictionary.pop(key)
     return a_dictionary
