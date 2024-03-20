@@ -13,8 +13,8 @@ def best_score(a_dictionary={}):
         return None
 
     best_score = 0
+    key_with_best_score = ""
     for k, v in a_dictionary.items():
         if (v > best_score):
-            best_score = v
-
+            best_score, key_with_best_score = v, k
     return best_score
