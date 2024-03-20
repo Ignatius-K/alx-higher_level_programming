@@ -12,3 +12,4 @@ def update_dictionary(a_dictionary, key, value):
         None
     '''
     a_dictionary[key] = value
+    return a_dictionary
