@@ -9,12 +9,14 @@ def best_score(a_dictionary={}):
     Return:
         best score
     '''
-    if (a_dictionary is None or a_dictionary.keys() == 0):
+    if not a_dictionary:
         return None
 
-    key_with_best_score = a_dictionary.keys()[0]
-    best_score = a_dictionary[key_with_best_score]
+    key_with_best_score = None
+    max_socre = float('-inf')
+
     for k, v in a_dictionary.items():
-        if (v > best_score):
-            best_score, key_with_best_score = v, k
+        if (v > max_socre):
+            max_socre = v
+            key_with_best_score = k
     return key_with_best_score
