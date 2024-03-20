@@ -9,7 +9,7 @@ def best_score(a_dictionary={}):
     Return:
         best score
     '''
-    if (a_dictionary.keys() == 0):
+    if (a_dictionary is None or a_dictionary.keys() == 0):
         return None
 
     best_score = 0
