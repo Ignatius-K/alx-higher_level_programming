@@ -11,7 +11,8 @@ def replace_in_list(my_list: list, idx: int, element: int) -> list:
     Return:
         modified list (list)
     '''
-    for (index, _) in my_list:
-        if (index == idx):
-            my_list[index] = element
-    return my_list
+    if idx < 0 or idx > len(my_list) - 1:
+        return my_list
+    else:
+        my_list[idx] = element
+        return my_list
