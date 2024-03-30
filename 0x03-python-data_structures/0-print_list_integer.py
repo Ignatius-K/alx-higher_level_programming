@@ -10,4 +10,4 @@ def print_list_integer(my_list=[]):
         None
     '''
     for integer in my_list:
-        print(f"{integer:d}")
+        print("{:d}".format(integer))
