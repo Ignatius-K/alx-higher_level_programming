@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def safe_print_list_integer(my_list=[], x=0):
+def safe_print_list_integers(my_list=[], x=0):
     '''safe print integers
 
     Params:
@@ -11,16 +11,12 @@ def safe_print_list_integer(my_list=[], x=0):
         exact number of elements printed
     '''
     printed_elements = 0
-    try:
-        for i in range(x):
-            try:
-                print("{:d}".format(my_list[i]), end="")
-                printed_elements += 1
-            except ValueError:
-                continue
-    except IndexError:
-        pass
-    finally:
-        print("\n", end="")
+    for i in range(x):
+        try:
+            print("{:d}".format(my_list[i]), end="")
+            printed_elements += 1
+        except ValueError:
+            continue
+    print("\n", end="")
 
     return printed_elements
