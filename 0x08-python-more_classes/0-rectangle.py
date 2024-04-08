@@ -2,6 +2,7 @@
 
 '''Rectangle module'''
 
+
 class Rectangle:
     '''Define Rectangle'''
     pass
