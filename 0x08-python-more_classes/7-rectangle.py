@@ -8,7 +8,7 @@ class Rectangle:
 
     Args:
         number_of_instances (int): Rectangle instances
-        print_symbol (str): symbol to print rectangle
+        print_symbol (any): symbol to print rectangle
     '''
 
     number_of_instances = 0
@@ -110,7 +110,7 @@ class Rectangle:
             return ""
         repr = ""
         for i in range(self.__height):
-            repr += type(self).print_symbol * self.__width
+            repr += str(type(self).print_symbol) * self.__width
             if (i < self.__height - 1):
                 repr += "\n"
         return (repr)
