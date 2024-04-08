@@ -78,15 +78,15 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """create rectangle with equal sides
+        """Create rectangle with equal sides
 
         Args:
-            size: size of each sides
+            size: The width and height
 
         Return:
             Rectangle: square created
         """
-        return cls(width=size, height=size)
+        return (cls(size, size))
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
