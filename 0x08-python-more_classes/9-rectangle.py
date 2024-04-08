@@ -86,7 +86,7 @@ class Rectangle:
         Return:
             Rectangle: square created
         """
-        return Rectangle(width=size, height=size)
+        return cls(width=size, height=size)
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
