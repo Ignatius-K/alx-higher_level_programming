@@ -110,7 +110,7 @@ class Rectangle:
             return ""
         repr = ""
         for i in range(self.__height):
-            repr += str(type(self).print_symbol) * self.__width
+            repr += str(self.print_symbol) * self.__width
             if (i < self.__height - 1):
                 repr += "\n"
         return (repr)
