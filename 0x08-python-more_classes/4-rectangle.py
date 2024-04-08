@@ -110,25 +110,3 @@ class Rectangle:
             str: string repr
         """
         return f"Rectangle({self.__width:d}, {self.__height:d})"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
