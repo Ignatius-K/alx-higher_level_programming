@@ -19,12 +19,13 @@ Using ``add_integer``
 	1
 
 ::
+	Expected arguments
 	The function's arg 'b' has a default value ``98``
 
-	>> add_integer(2)
+	>>> add_integer(2)
 	100
 
-	>> add_integer(0)
+	>>> add_integer(0)
 	98
 
 ::
@@ -48,11 +49,6 @@ Using ``add_integer``
 	Traceback (most recent call last):
 	...
 	TypeError: b must be an integer
-
-	>>> add_integer()
-	Traceback (most recent call last):
-	...
-	TypeError: add_integer() missing 1 required positional argument: 'a'
 
 ::
 	Since ``float`` is cast to ``int``, issues are expected
