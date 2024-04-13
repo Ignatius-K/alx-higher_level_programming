@@ -21,7 +21,8 @@ def matrix_divided(matrix, div):
     validate_divisor(div)
     for row_index, row in enumerate(matrix):
         for element_index, element in enumerate(row):
-            matrix[row_index][element_index] = float(format(element / divisor), ".2f")
+            dividend = element / div
+            matrix[row_index][element_index] = float(format(dividend, ".2f"))
     return (matrix)
 
 
