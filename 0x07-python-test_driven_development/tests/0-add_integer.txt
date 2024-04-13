@@ -1,0 +1,24 @@
+
+Import function
+>>> add_integer = __import__("0-add_integer").add_integer
+
+Expected success
+>>> add_integer(2, 3)
+5
+
+>>> add_integer(0, 1)
+1
+
+>>> add_integer(2.5, 2)
+4
+
+>>> add_integer(3, 2.8)
+5
+
+>>> add_integer("hello", 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+
