@@ -30,7 +30,9 @@ class TestMaxInteger(unittest.TestCase):
         sample_value_elements = {
             1: [1],
             10: [1, 2, 4, 10],
-            0.5: [0.1, 0.49, 0.5]
+            0.5: [0.1, 0.49, 0.5],
+            2: [2, 1, 0, -2],
+            50: [22, 13, 4, 50, 6, 34, 22, 1]
         }
         for (key, value) in sample_value_elements.items():
             self.assertEqual(key, max_integer(value))
