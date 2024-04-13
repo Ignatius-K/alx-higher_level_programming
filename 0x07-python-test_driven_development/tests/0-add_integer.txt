@@ -1,24 +1,72 @@
 
-Import function
->>> add_integer = __import__("0-add_integer").add_integer
+The ``0-add_integer`` module
+============================
 
-Expected success
->>> add_integer(2, 3)
-5
+Using ``add_integer``
+---------------------
 
->>> add_integer(0, 1)
-1
+``add_integer(a, b=98)`` returns sum of its two arguments
 
->>> add_integer(2.5, 2)
-4
+	>>> add_integer = __import__("0-add_integer").add_integer
 
->>> add_integer(3, 2.8)
-5
+::
+	The function as stated, performs addition on two arguments
 
->>> add_integer("hello", 3)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
+	>>> add_integer(2, 3)
+	5
 
+	>>> add_integer(0, 1)
+	1
 
+::
+	The function's arg 'b' has a default value ``98``
 
+	>> add_integer(2)
+	100
+
+	>> add_integer(0)
+	98
+
+::
+	Accepts both ``int`` and ``float`` type, which are cast to int
+
+	>>> add_integer(2.5, 2)
+	4
+
+	>>> add_integer(3, 2.8)
+	5
+
+::
+	For other types
+
+	>>> add_integer("hello", 3)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(3, TypeError)
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> add_integer()
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+::
+	Since ``float`` is cast to ``int``, issues are expected
+	1. not-a-number ``nan``
+
+	>>> add_integer(float('nan'))
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
+
+	2. positive infinity ``inf``
+	>>> add_integer(float('inf'), 0)
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
+
+::
