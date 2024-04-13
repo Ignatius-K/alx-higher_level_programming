@@ -19,11 +19,13 @@ def matrix_divided(matrix, div):
     """
     validate_matrix(matrix)
     validate_divisor(div)
+    divided_matrix = []
     for row_index, row in enumerate(matrix):
+        divided_matrix.append([])
         for element_index, element in enumerate(row):
             dividend = element / div
-            matrix[row_index][element_index] = float(format(dividend, ".2f"))
-    return (matrix)
+            divided_matrix[row_index].append(float(format(dividend, ".2f")))
+    return (divided_matrix)
 
 
 def validate_matrix(matrix):
