@@ -12,5 +12,5 @@ def lookup(obj):
     Return:
         obj's attributes
     """
-    return (obj.__dir__())
+    return (dir(obj))
 
