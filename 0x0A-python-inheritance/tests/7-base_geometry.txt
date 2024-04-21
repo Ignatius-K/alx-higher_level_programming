@@ -6,42 +6,46 @@ Using ```BaseGeometry``` class
 
 The ``BaseGeometry`` class defines the base type for advanced geometry types
 
+::
 	>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 	>>> base_obj = BaseGeometry()
 
 
-::
-	The ```area``` method raises an Exception if not implemented
+The ```area``` method raises an Exception if not implemented
 
+::
 	>>> base_obj.area()
 	Traceback (most recent call last):
 	...
 	Exception: area() is not implemented
 
 
+The ```integer_validator``` method validates the value
+integer_validator(name, value): ...
+
+If value is valid, nothing is returned or raised
+
 ::
-	The ```integer_validator``` method validates the value
-	integer_validator(name, value): ...
-
-	If value is valid, nothing is returned or raised
-
 	>>> base_obj.integer_validator("my_int", 5)
 
-	If value is not ``int``, TypeError is raised
 
+If value is not ``int``, TypeError is raised
+
+::
 	>>> base_obj.integer_validator("my_int", "3")
 	Traceback (most recent call last):
 	...
 	TypeError: my_int must be an integer
 
-
+::
 	>>> base_obj.integer_validator("my_int", True)
 	Traceback (most recent call last):
 	...
 	TypeError: my_int must be an integer
 
-	If value is not greater than 0, ValueError is raised
+If value is not greater than 0, ValueError is raised
 
+::
 	>>> base_obj.integer_validator("another_int", -5)
 	Traceback (most recent call last):
 	...
