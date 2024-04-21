@@ -36,10 +36,19 @@ but adds a flavor of method that prints sorted list
 	>>> sample_list.print_sorted()
 	[2, 5]
 
+
 	>>> another_sample_list = MyList()
+
+	>>> another_sample_list.print_sorted()
+	[]
+
 	>>> another_sample_list.extend([-3, -7, 12, 4, 2])
 	>>> another_sample_list
 	[-3, -7, 12, 4, 2]
 
 	>>> another_sample_list.print_sorted()
 	[-7, -3, 2, 4, 12]
+
+	``print_sorted`` returns a new list
+	>>> another_sample_list
+	[-3, -7, 12, 4, 2]
