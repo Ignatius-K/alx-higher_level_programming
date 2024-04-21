@@ -19,8 +19,21 @@ The ```area``` method raises an Exception if not implemented
 	Exception: area() is not implemented
 
 
-The ```integer_validator``` method validates the value
+The ```integer_validator``` method, expects 2 args validates the value
 integer_validator(name, value): ...
+
+If args, are not provided, exception is raised
+::
+	>>> base_obj.integer_validator() # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	...
+	TypeError: ...
+	
+::
+	>>> base_obj.integer_validator("my_name") # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	...
+	TypeError: ...
 
 
 If value is valid, nothing is returned or raised
