@@ -34,6 +34,12 @@ The ``BaseGeometry`` class defines the base type for advanced geometry types
 	...
 	TypeError: my_int must be an integer
 
+
+	>>> base_obj.integer_validator("my_int", True)
+	Traceback (most recent call last):
+	...
+	TypeError: my_int must be an integer
+
 	If value is not greater than 0, ValueError is raised
 
 	>>> base_obj.integer_validator("another_int", -5)
