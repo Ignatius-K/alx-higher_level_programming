@@ -78,6 +78,12 @@ If value is not ``int``, TypeError is raised
 	...
 	TypeError: my_int must be an integer
 
+::
+	>>> base_obj.integer_validator("my_int", {3, 2})
+	Traceback (most recent call last):
+	...
+	TypeError: my_int must be an integer
+
 
 If value is not greater than 0, ValueError is raised
 ::
