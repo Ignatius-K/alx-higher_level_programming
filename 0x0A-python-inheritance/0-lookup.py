@@ -3,7 +3,7 @@
 """Module defining a util function ``lookup`` """
 
 
-def lookup(obj: object) -> list:
+def lookup(obj):
     """lookup
 
     Args:
