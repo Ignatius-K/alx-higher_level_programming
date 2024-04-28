@@ -8,6 +8,8 @@ from models.base import Base
 class Rectangle(Base):
     """Rectangle subclass of Base"""
 
+    __display_symbol = "#"
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Creates a Rectangle
 
@@ -82,3 +84,10 @@ class Rectangle(Base):
     def area(self):
         """calculate rectangle area"""
         return (self.__width * self.__height)
+
+    def display(self):
+        """Display rectangle"""
+        for row in range(self.__height):
+            for column in range(self.__width):
+                print(self.__display_symbol, end="")
+            print("")
