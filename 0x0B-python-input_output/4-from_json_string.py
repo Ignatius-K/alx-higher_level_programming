@@ -5,7 +5,7 @@
 import json
 
 
-def from_json_string(my_str = ""):
+def from_json_string(my_str=""):
     """Convert JSON string to object
 
     Args:
