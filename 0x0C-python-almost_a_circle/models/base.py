@@ -23,6 +23,6 @@ class Base:
         self.__class__.__nb_objects += 1
         self.id = self.__class__.__nb_objects
 
-    def __del__(self):
-        """Destroy a Base object"""
-        self.__class__.__nb_objects -= 1
+    # def __del__(self):
+    #     """Destroy a Base object"""
+    #     self.__class__.__nb_objects -= 1
