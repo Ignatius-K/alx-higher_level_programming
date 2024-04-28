@@ -65,3 +65,14 @@ class TestRectangle(unittest.TestCase):
             rectangle = Rectangle(*self.args, x=-1)
         with self.assertRaises(ValueError):
             rectangle = Rectangle(*self.args, y=-1)
+
+    def test_area_of_rectangle(self):
+        """Test area of a rectangle"""
+        test_data = [
+            {"width": 1, "height": 1, "area": 1},
+            {"width": 2, "height": 1, "area": 2},
+            {"width": 100, "height": 10, "area": 1000},
+        ]
+        for datum in test_data:
+            temp_rectangle = Rectangle(datum["width"], datum["height"])
+            self.assertEqual(temp_rectangle.area(), datum["area"])
