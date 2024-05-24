@@ -11,10 +11,12 @@ WITH california_id as (
 )
 
 SELECT
-	*
+	cities.*
 FROM
-	hbtn_0d_usa.cities 
+	hbtn_0d_usa.cities AS cities 
 WHERE
 	state_id = (
 		SELECT id FROM california_id
-	);
+	)
+ORDER BY
+	cities.id ASC;
