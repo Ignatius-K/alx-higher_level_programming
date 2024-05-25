@@ -11,7 +11,8 @@ WITH california_id AS (
 )
 
 SELECT
-	cities.*
+	id,
+	name
 FROM
 	cities
 WHERE
