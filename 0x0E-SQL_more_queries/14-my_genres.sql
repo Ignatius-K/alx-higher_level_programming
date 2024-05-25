@@ -13,4 +13,6 @@ INNER JOIN
 		ON tv_show.id = show_genre.show_id
 WHERE
 	tv_show.title = "Dexter"
+ORDER BY
+	genre.name ASC
 ;
