@@ -4,7 +4,7 @@ SELECT
 	shows.title,
 	show_genres.show_id
 FROM
-	tv_shows as shows
+	tv_shows AS shows
 LEFT OUTER JOIN
 	tv_show_genres AS show_genres
 		ON shows.id = show_genres.show_id
