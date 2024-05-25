@@ -7,7 +7,7 @@ INNER JOIN
 	tv_show_genres AS show_genre
 		ON show_genre.show_id = tv_show.id
 INNER JOIN
-	tv_genres as genre
+	tv_genres AS genre
 		ON genre.id = show_genre.genre_id
 WHERE
 	genre.name = "Comedy"
