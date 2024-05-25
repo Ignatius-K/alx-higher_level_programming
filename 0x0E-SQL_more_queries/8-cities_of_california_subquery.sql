@@ -5,7 +5,7 @@ WITH california_id AS (
 	SELECT
 		id
 	FROM
-		hbtn_0d_usa.states
+		states
 	WHERE
 		name = "California"
 )
@@ -13,7 +13,7 @@ WITH california_id AS (
 SELECT
 	cities.*
 FROM
-	hbtn_0d_usa.cities AS cities 
+	cities
 WHERE
 	state_id = (
 		SELECT id FROM california_id
