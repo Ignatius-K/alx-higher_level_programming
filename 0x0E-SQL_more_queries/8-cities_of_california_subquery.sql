@@ -1,7 +1,7 @@
 -- List all cities of California
 -- Found in database `hbtn_0d_usa`
 -- Result must be sorted by `cities.id` in ascending order
-WITH california_id as (
+WITH california_id AS (
 	SELECT
 		id
 	FROM
