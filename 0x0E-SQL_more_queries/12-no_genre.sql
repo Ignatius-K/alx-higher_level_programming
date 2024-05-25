@@ -10,4 +10,6 @@ LEFT OUTER JOIN
 		ON shows.id = show_genres.show_id
 WHERE
 	show_genres.show_id IS NULL
+ORDER BY
+	shows.title ASC, show_genres.genre_id ASC
 ;
