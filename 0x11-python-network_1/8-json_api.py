@@ -27,6 +27,6 @@ if __name__ == "__main__":
         if (len(response_body.keys()) == 0):
             print("No result")
         else:
-            print(f"[{response_body.get("id")}] {response_body.get("name")}")
+            print(f"[{response_body.get('id')}] {response_body.get('name')}")
     except requests.JSONDecodeError:
         print("Not a valid JSON")
