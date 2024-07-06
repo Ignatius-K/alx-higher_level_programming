@@ -2,12 +2,11 @@
 
 """Script that makes HTTP request"""
 
-import sys
 from requests import Request, Session
 
 if __name__ == "__main__":
 
-    request_url = sys.argv[1]
+    request_url = "https://alx-intranet.hbtn.io/status"
     request = Request(method="GET", url=request_url)
 
     session = Session()
