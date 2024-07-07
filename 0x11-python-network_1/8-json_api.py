@@ -24,9 +24,11 @@ if __name__ == "__main__":
     try:
         response = session.send(prepared_request)
         response_body = response.json()
-        if (len(response_body.keys()) == 0):
+        user_id = response_body.get('id')
+        username = response_body.get('name')
+        if (len(response_body.keys()) == 0) or not user_id or not username:
             print("No result")
         else:
-            print(f"[{response_body.get('id')}] {response_body.get('name')}")
+            print(f"[{user_id}] {username}")
     except requests.JSONDecodeError:
         print("Not a valid JSON")
