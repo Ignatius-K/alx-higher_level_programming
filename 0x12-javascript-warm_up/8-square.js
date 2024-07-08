@@ -18,5 +18,5 @@ if (squareSize < 0) {
 }
 
 for (let i = 0; i < squareSize; i++) {
-	console.log('X'.repeat(squareSize))
+  console.log('X'.repeat(squareSize));
 }
