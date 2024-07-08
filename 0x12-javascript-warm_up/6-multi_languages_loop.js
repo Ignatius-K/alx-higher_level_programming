@@ -5,9 +5,9 @@
  *
  * Script that loops through array
  */
-let langaugeArray = [
-	'C is fun',
-	'Python is cool',
-	'JavaScript is amazing'
-]
-langaugeArray.forEach(language => console.log(language))
+const langaugeArray = [
+  'C is fun',
+  'Python is cool',
+  'JavaScript is amazing'
+];
+langaugeArray.forEach(language => console.log(language));
