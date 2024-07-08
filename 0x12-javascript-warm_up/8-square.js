@@ -17,6 +17,6 @@ if (squareSize < 0) {
   exit(0);
 }
 
-Array(squareSize).fill().forEach(() => {
-  console.log('x'.repeat(squareSize));
-});
+for (let i = 0; i < squareSize; i++) {
+	console.log('X'.repeat(squareSize))
+}
