@@ -12,6 +12,11 @@ if (!(squareSize = parseInt(argv[2]))) {
   console.log('Missing size');
   exit(0);
 }
+
+if (squareSize < 0) {
+  exit(0);
+}
+
 Array(squareSize).fill().forEach(() => {
   console.log('x'.repeat(squareSize));
 });
