@@ -5,6 +5,6 @@
  *
  * Module defining arithmetic addition operation
  */
-exports.add = function add(param1, param2) {
-  return (param1 + param2)
-}
+exports.add = function add (param1, param2) {
+  return (param1 + param2);
+};
