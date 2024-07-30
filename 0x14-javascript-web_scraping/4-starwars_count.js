@@ -21,10 +21,15 @@ if (argv.length < NUM_OF_EXPECTED_ARGS) {
 }
 
 const url = argv[2];
-request(url, {}, (error, _, body) => {
+request(url, {}, (error, response, body) => {
   if (error) {
     console.error(error);
     exit(1);
+  }
+
+  if (response.statusCode !== 200) {
+    console.error(`code: ${response.statusCode}`);
+    return;
   }
 
   const movies = JSON.parse(body).results;
