@@ -17,11 +17,3 @@ if (targetElement) {
   });
 }
 /* eslint-enable no-undef */
-
-// const targetElement = document.querySelector('header')
-// const triggerElement = document.querySelector('div#red_header')
-// if (triggerElement) {
-//   triggerElement.addEventListener('click', () => {
-//     targetElement.style.setProperty('color', '#FF0000')
-//   })
-// }
