@@ -11,6 +11,9 @@
 
 /* eslint-disable no-undef */
 const movieList = $('UL#list_movies');
+const another = $('div#fgsfgfs');
+console.log(movieList);
+console.log(another);
 
 if (movieList) {
   $.ajax({
